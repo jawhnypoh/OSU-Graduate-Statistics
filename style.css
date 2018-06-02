@@ -1,8 +1,24 @@
-/* Body */
+/* Body CSS */
+/* General CSS for All Pages */
 .osu_logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.spacer {
+    margin: 100px;
+}
+
+/* Homepage CSS */
+.totalGrads {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.totalGradsTitle {
+    text-align: center;
 }
 
 .statistics_links {
@@ -10,7 +26,7 @@
     text-align: center;
 }
 
-#genderBtn, #degreeBtn, #collegeBtn {
+.genderBtn, .degreeBtn, .collegeBtn {
     background-color: #DC4405;
     color: white;
     border: none;
@@ -22,12 +38,33 @@
     margin: 10px;
 }
 
-#genderBtn:hover, #degreeBtn:hover, #collegeBtn:hover {
+.genderBtn:hover, .degreeBtn:hover, .collegeBtn:hover {
     cursor: pointer;
     background-color: #7F2703;
     transition-duration: 0.4s;
 }
 
+
+/* Gender CSS */
+.genderTitle {
+    text-align: center;
+}
+
+.graphs-container-1 {
+    margin-left: 200px;
+}
+
+.graphs-container-2 {
+    margin-left: 350px;
+}
+
+.g-2001, .g-2005, .g-2009, .g-2013, .g-2017 {
+/*
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+*/
+}
 
 /* Footer */
 .footer {
