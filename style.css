@@ -50,21 +50,43 @@
     text-align: center;
 }
 
-.graphs-container-1 {
+.gender-container-1 {
     margin-left: 200px;
 }
 
-.graphs-container-2 {
+.gender-container-2 {
     margin-left: 350px;
 }
 
 .g-2001, .g-2005, .g-2009, .g-2013, .g-2017 {
-/*
+
+}
+
+
+/* Degree CSS */
+.degreeTitle {
+    text-align: center;
+}
+
+.d-2001, .d-2005, .d-2009, .d-2013, .d-2017 {
     display: block;
     margin-left: auto;
     margin-right: auto;
-*/
+    padding: 50px;
 }
+
+
+/* College CSS */
+.collegeTitle {
+    text-align: center;
+}
+
+.college-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /* Footer */
 .footer {
