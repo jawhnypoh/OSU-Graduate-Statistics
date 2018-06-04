@@ -19,6 +19,7 @@ li {
 
 li a {
     float: left;
+    font-family: sans-serif;
 }
 
 .logo_container {
@@ -39,6 +40,7 @@ li a {
 
 .totalGradsTitle {
     text-align: center;
+    font-family: sans-serif;
 }
 
 .statistics_links {
@@ -66,6 +68,7 @@ li a {
 /* Gender CSS */
 .genderTitle {
     text-align: center;
+    font-family: sans-serif;    
 }
 
 .gender-container-1 {
@@ -84,6 +87,7 @@ li a {
 /* Degree CSS */
 .degreeTitle {
     text-align: center;
+    font-family: sans-serif;    
 }
 
 .d-2001, .d-2005, .d-2009, .d-2013, .d-2017 {
@@ -97,6 +101,7 @@ li a {
 /* College CSS */
 .collegeTitle {
     text-align: center;
+    font-family: sans-serif;    
 }
 
 .college-img {
