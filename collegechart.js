@@ -25,7 +25,8 @@ Highcharts.chart('college-container', {
       label: {
         connectorAllowed: false
       },
-      pointStart: 2001
+      pointStart: 2001,
+      pointInterval: 2
     }
   },
 

@@ -36,13 +36,41 @@
             <h1 class="degreeTitle">Graduate Statistics by Degree</h1>
         </div>
         
-        <div class="degree-container-1">
-            <img src="images/degree2001.png" class="d-2001" alt="degree graph in 2001">
-            <img src="images/degree2005.png" class="d-2005" alt="degree graph in 2005">
-            <img src="images/degree2009.png" class="d-2009" alt="degree graph in 2009">
-            <img src="images/degree2013.png" class="d-2013" alt="degree graph in 2013">
-            <img src="images/degree2017.png" class="d-2017" alt="degree graph in 2017">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="number-text">1 / 5</div>
+                <div id="degree-container-2001">
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="degreechart2001.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                </div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="number-text">2 / 5</div>
+                <div id="degree-container-2005">
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="degreechart2005.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                </div>
+            </div>
+            
+            <!-- Next and Previous Buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        
+        <!-- Dots/Circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <span class="dot" onclick="currentSlide(5)"></span> 
+        </div>
+        
         
         <div class="spacer">
             <!-- Cheap way to make space -->
@@ -52,4 +80,35 @@
             <p>Created by Johnny Po and Hanadi Alqahtani</p>
         </div>
     </body>
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1} 
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none"; 
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block"; 
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
 </html>
