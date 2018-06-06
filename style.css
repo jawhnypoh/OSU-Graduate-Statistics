@@ -10,6 +10,10 @@ body {
     box-sizing: border-box;
 }
 
+.highcharts-credits {
+    display: none;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
