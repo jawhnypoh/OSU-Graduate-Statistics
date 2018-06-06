@@ -35,6 +35,76 @@
             <h1 class="genderTitle">Graduate Statistics by Gender</h1>
         </div>
         
+        <div class="slideshow-container">
+            <!-- 2001 -->
+            <div class="mySlides fade">
+                <div class="number-text">1 / 5</div>
+                <div id="gender-container-2001">
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="genderchart2001.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                </div>
+            </div>
+            
+            <!-- 2005 -->
+            <div class="mySlides fade">
+                <div class="number-text">2 / 5</div>
+                <div id="gender-container-2005">
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="genderchart2005.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                </div>
+            </div>
+            
+            <!-- 2009 -->
+            <div class="mySlides fade">
+                <div class="number-text">3 / 5</div>
+                <div id="gender-container-2009">
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="genderchart2009.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                </div>
+            </div>
+            
+            <!-- 2013 -->
+            <div class="mySlides fade">
+                <div class="number-text">4 / 5</div>
+                <div id="gender-container-2013">
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="genderchart2013.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                </div>
+            </div>
+            
+            <!-- 2017 -->
+            <div class="mySlides fade">
+                <div class="number-text">5 / 5</div>
+                <div id="gender-container-2017">
+                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                    <script src="genderchart2017.js"></script>
+                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+                </div>
+            </div>
+            
+            <!-- Next and Previous Buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        
+        <!-- Dots/Circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+          <span class="dot" onclick="currentSlide(4)"></span> 
+          <span class="dot" onclick="currentSlide(5)"></span> 
+        </div>
+<!--
         <div class="gender-container-1">
             <img src="images/gender2001.png" class="g-2001" alt="gender graph in 2001" height="300" width="300">
             <img src="images/gender2005.png" class="g-2005" alt="gender graph in 2005" height="300" width="300">
@@ -45,6 +115,7 @@
             <img src="images/gender2013.png" class="g-2013" alt="gender graph in 2013" height="300" width="300">
             <img src="images/gender2017.png" class="g-2017" alt="gender graph in 2017" height="300" width="300">
         </div>
+-->
         
         <div class="spacer">
             <!-- Cheap way to make space -->
@@ -54,4 +125,35 @@
             <p>Created by Johnny Po and Hanadi Alqahtani</p>
         </div>
     </body>
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1} 
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none"; 
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block"; 
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
 </html>
