@@ -6,6 +6,9 @@ Highcharts.chart('total-container', {
   title: {
     text: ''
   },
+  subtitle: {
+    text: 'Source: institutionalresearch.oregonstate.edu'
+  },
   xAxis: {
     categories: ['2001', '2005', '2009', '2013', '2017']
   },
