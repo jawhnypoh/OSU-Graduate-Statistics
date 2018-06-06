@@ -47,6 +47,13 @@ li a {
     font-family: sans-serif;
 }
 
+#total-container {
+    min-width: 310px;
+    max-width: 800px;
+    height: 400px;
+    margin: 0 auto;
+}
+
 .statistics_links {
     margin-top: 100px;
     text-align: center;
@@ -80,30 +87,11 @@ li a:hover {
     font-family: sans-serif;    
 }
 
-.gender-container-1 {
-    margin-left: 200px;
-}
-
-.gender-container-2 {
-    margin-left: 350px;
-}
-
-.g-2001, .g-2005, .g-2009, .g-2013, .g-2017 {
-
-}
-
 
 /* Degree CSS */
 .degreeTitle {
     text-align: center;
     font-family: sans-serif;    
-}
-
-.d-2001, .d-2005, .d-2009, .d-2013, .d-2017 {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 50px;
 }
 
 /* Hidden by Default */
@@ -185,12 +173,6 @@ li a:hover {
 .collegeTitle {
     text-align: center;
     font-family: sans-serif;    
-}
-
-.college-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #college-container {
