@@ -12,7 +12,7 @@ Highcharts.chart('total-container', {
   yAxis: {
     min: 0,
     title: {
-      text: 'Total fruit consumption'
+      text: 'Number of Graduates'
     }
   },
   legend: {
