@@ -6,59 +6,44 @@ Highcharts.chart('degree-container-2013', {
   title: {
     text: '2013'
   },
-    
   subtitle: {
     text: 'Source: institutionalresearch.oregonstate.edu'
   },
-    
   xAxis: {
-    categories: ['Agricultural Sciences', 'Business', 'Earth, Ocean, &amp; Atmospheric Sciences', 'Education', 'Engineering', 'Forestry', 'Graduate School', 'Liberal Arts', 'Pharamcy', 'Public Health &amp; Human Sciences', 'Science', 'Veterinary Medicine']
+    categories: [
+      'Agricultural Sciences', 'Business', 'Earth, Ocean, &amp; Atmospheric Sciences', 'Education', 'Engineering', 'Forestry', 'Graduate School', 'Liberal Arts', 'Pharamcy', 'Public Health &amp; Human Sciences', 'Science', 'Veterinary Medicine'
+    ],
+    crosshair: true
   },
   yAxis: {
     min: 0,
     title: {
-      text: 'Total Number of Graduates'
-    },
-    stackLabels: {
-      enabled: true,
-      style: {
-        fontWeight: 'bold',
-        color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
-      }
+      text: 'Number of Graduates'
     }
   },
-  legend: {
-    align: 'right',
-    x: -30,
-    verticalAlign: 'top',
-    y: 25,
-    floating: true,
-    backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-    borderColor: '#CCC',
-    borderWidth: 1,
-    shadow: false
-  },
   tooltip: {
-    headerFormat: '<b>{point.x}</b><br/>',
-    pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+      '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+    footerFormat: '</table>',
+    shared: true,
+    useHTML: true
   },
   plotOptions: {
     column: {
-      stacking: 'normal',
-      dataLabels: {
-        enabled: true,
-        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
-      }
+      pointPadding: 0.2,
+      borderWidth: 0
     }
   },
   series: [{
-    name: 'Doctorate',
-    data: [20, 4, 8, 31, 60, 10, 20, 2, 92, 16, 35, 55]
+    name: 'Bachelor',
+    data: [381, 598, 130, 69, 653, 178, 0, 801, 0, 681, 422, 2]
   }, {
     name: 'Master',
     data: [63, 71, 26, 139, 184, 29, 49, 62, 3, 62, 45, 2]
   }, {
-    name: 'Bachelor',
-    data: [381, 598, 130, 69, 653, 178, 0, 801, 0, 681, 422, 2]
+    name: 'Doctorate',
+    data: [20, 4, 8, 31, 60, 10, 20, 2, 92, 16, 35, 55]
   }]
 });
+
