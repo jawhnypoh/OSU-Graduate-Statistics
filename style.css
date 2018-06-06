@@ -213,7 +213,7 @@ li a:hover {
 
 /* Footer */
 .footer {
-    position: relative;
+    position: fixed;
     bottom: 0;
     left: 0px;
     background-color: #333;
@@ -224,7 +224,7 @@ li a:hover {
 .footer p {
     text-align: center;
     color: white;
-    padding-top: 15px;
+    padding-top: 5px;
     margin-left: 10px;
     font-family: sans-serif;
 }
